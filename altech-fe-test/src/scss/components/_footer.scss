@@ -1,0 +1,134 @@
+.footer {
+  background-color: $color-primary-dark;
+  color: #fff;
+  padding: 2rem;
+  padding-top: 4rem;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid darken($color-primary-dark, 10%);
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+
+  &__left {
+    flex: 1;
+    min-width: 200px;
+
+    & .footer__logo {
+      @apply text-5xl;
+      font-weight: bold;
+    }
+
+    & .footer__tagline {
+      @apply text-xl;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    & .footer__column {
+      flex: 1;
+      padding-left: 2rem;
+      min-width: 200px;
+      margin-bottom: 1rem;
+
+      & .footer__title {
+        @apply text-2xl font-semibold;
+        margin-bottom: 1rem;
+      }
+
+      & .footer__list {
+        list-style: none;
+        padding: 0;
+
+        & .footer__list-item {
+          @apply text-lg;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+
+    & .footer__copyright {
+      @apply text-xl;
+      margin-bottom: 1rem;
+    }
+
+    & .footer__social {
+      display: flex;
+      gap: 1rem;
+
+      &-link {
+        color: #fff;
+        text-decoration: none;
+        @apply text-xl;
+
+        svg {
+          @apply w-8 h-8;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__content, &__bottom {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__left {
+      @apply mb-12;
+      text-align: center;
+    }
+
+    &__right {
+      & .footer__column {
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+
+    &__bottom {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    &__left {
+      text-align: center;
+    }
+
+    &__tagline {
+      @apply text-lg;
+    }
+
+    &__list-item {
+      @apply text-lg;
+    }
+
+    &__copyright {
+      @apply text-lg;
+    }
+
+    &__social-link {
+      @apply text-lg;
+      svg {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.pricing {
+  background-color: $color-white;
+  color: $color-primary;
+  padding: 10rem 1rem;
+  text-align: center;
+
+  &__header {
+    margin-bottom: 2rem;
+
+    &__title {
+      @apply text-7xl font-semibold;
+      margin-bottom: 1rem;
+      color: $color-black;
+    }
+
+    &__desc {
+      @apply text-2xl font-semibold;
+      color: $color-grey;
+    }
+  }
+
+  &__toggle {
+    margin-bottom: 2rem;
+
+    &-btn {
+      background-color: transparent;
+      border: none;
+      font-size: 1rem;
+      margin: 0 0.5rem;
+      cursor: pointer;
+
+      &--active {
+        font-weight: bold;
+        border-bottom: 2px solid $color-primary;
+      }
+    }
+  }
+
+  &__cards {
+    @apply mx-auto gap-x-6;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  &__card {
+    background-color: darken($color-grey, 10%);
+    color: $color-white;
+    border-radius: 8px;
+    box-shadow: $card-shadow;
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: left;
+
+    &-title {
+      @apply text-3xl;
+      margin-bottom: 0.5rem;
+    }
+
+    &-desc {
+      @apply text-xl;
+      margin-bottom: 1rem;
+      color: $color-white-dark;
+    }
+
+    &-price {
+      @apply text-5xl;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+
+      span {
+        @apply text-xl;
+        color: $color-white-dark;
+      }
+    }
+
+    &-btn {
+      @apply text-xl;
+      background-color: $color-primary;
+      color: $color-white;
+      padding: 1.1rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      width: 100%;
+
+      &:hover {
+        background-color: darken($color-primary, 10%);
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1.5rem;
+    max-width: 1200px;
+    @apply rounded-xl mx-auto;
+  
+    th,
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid $color-primary;
+      text-align: center;
+    }
+  
+    th {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  
+    td {
+      color: $color-primary;
+    }
+  
+    // Ensure the first and last cells are rounded
+    th:first-child {
+      border-top-left-radius: 1rem;
+      border-left: none;
+    }
+  
+    th:last-child {
+      border-top-right-radius: 1rem;
+    }
+
+    tr:last-child td:first-child {
+      border-bottom-left-radius: 1rem;
+    }
+  
+    tr:last-child td:last-child {
+      border-bottom-right-radius: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__card {
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding: 2rem;
+
+      &-title {
+        @apply font-bold;
+      }
+
+      &-btn {
+        @apply text-xl;
+        padding: 1.25rem 1.5rem;
+      }
+    }
+  }
+}

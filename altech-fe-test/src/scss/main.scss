@@ -1,0 +1,21 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "abstracts/utilities";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/navbar";
+@import "components/buttons";
+@import "components/hero";
+@import "components/aboutus";
+@import "components/pricing";
+@import "components/contactus";
+@import "components/footer";
+
+.App {
+	position: relative;
+}

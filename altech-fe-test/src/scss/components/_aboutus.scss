@@ -1,0 +1,92 @@
+.about-us {
+  background-color: $color-white;
+  color: $color-primary;
+  padding: 15rem 0;
+  text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @apply font-semibold text-7xl mb-10;
+    margin-bottom: 1rem;
+    color: $color-black;
+  }
+
+  &__section {
+    @apply flex flex-row gap-x-12 px-24 items-center;
+  }
+
+  &__subtitle {
+    @apply font-semibold text-2xl mx-auto;
+    color: $color-grey;
+    margin-bottom: 2rem;
+    max-width: 700px;
+  }
+
+  &__image {
+    @apply w-1/2;
+  }
+
+  &__text {
+    @apply font-normal text-xl text-start;
+    margin-bottom: 1rem;
+    color: $color-secondary;
+
+    &--title {
+      @apply font-semibold text-5xl mb-5;
+    }
+
+    &--list {
+      @apply list-inside;
+    }
+
+    &--item {
+      @apply inline-flex gap-x-2 items-center text-2xl;
+    }
+
+    &--item-icon {
+      @apply w-6 h-6;
+      color: $color-primary;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__content {
+      padding: 0 4rem;
+    }
+
+    &__section {
+      flex-direction: column;
+    }
+
+    &__section:last-child {
+      flex-direction: column-reverse;
+    }
+
+    &__text {
+      @apply mx-auto;
+      max-width: 55%;
+    }
+
+    &__subtitle {
+      @apply text-4xl;
+    }
+
+    &__image {
+      @apply w-3/4;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    &__text {
+      @apply mx-auto;
+      max-width: 75%;
+    }
+  }
+}
