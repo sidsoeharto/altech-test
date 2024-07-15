@@ -30,7 +30,7 @@ To run the React project located in the `altech-fe-test` folder, follow these st
 
 5. **Open your browser and navigate to:**
     ```
-    http://localhost:3000
+    http://localhost:5173
     ```
 
 ## Explanation of `test-1` Folder
